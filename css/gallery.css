@@ -1,0 +1,205 @@
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  background-color: #102E50;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Navigation */
+nav {
+  background-color: #3B6790;
+  text-align: center;
+  padding: 15px 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ddd;
+}
+
+/* Section Headings */
+.gallery-section {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+/* Gallery Layout */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 0 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(255,255,255,0.2);
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.lightbox-controls {
+  margin-top: 15px;
+}
+
+.lightbox-controls button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 36px;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.lightbox-controls button:hover {
+  color: #aaa;
+}
+
+/* Divider */
+.thick-divider {
+  border: 0;
+  height: 5px;
+  background-color: #ccc;
+  margin: 60px auto;
+  width: 80%;
+  border-radius: 5px;
+}
+
+/* Contact Section */
+.contact-section {
+  background: #f7f7f7;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 12px;
+  margin-top: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact-section p {
+  color: #555;
+  font-size: 1.1em;
+  margin-bottom: 25px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.contact-item {
+  font-size: 1.1em;
+  color: #222;
+}
+
+.contact-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #3B6790;
+  color: #fff;
+  padding: 25px 10px;
+  font-size: 0.9rem;
+}

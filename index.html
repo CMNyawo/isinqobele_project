@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Isinqobele Project</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Isinqobele Project</h1>
+    <p>Specialists in Custom Furniture & Interior Design</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="gallery.html">Explore our work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Isinqobele Project is dedicated to bringing high-quality craftsmanship to your home and workspace. 
+      <br>We specialize in custom-built furniture that transforms spaces and reflects your personal style.</p>
+
+      <hr class="thick-divider">
+
+      <div style="text-align: center;">
+        <h3>This is what the Isinqobele project can bring to your home</h3>
+      </div>
+    
+      <!-- Swiper HTML -->
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="Images/Kitchen & Bedroom Built-in Cupboards/p2.avif" /></div>
+          <div class="swiper-slide"><img src="Images/Office Furniture/p3.avif" /></div>
+          <div class="swiper-slide"><img src="Images/TV Stands/p4.webp" /></div>
+          <div class="swiper-slide"><img src="Images/backgroung_picture-main/Ceiling.jpg" /></div>
+        </div>
+    
+        <!-- Navigation arrows -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+  </section>
+
+  <hr class="thick-divider">
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service" onclick="toggleImage(this)">
+        <img src="Images/backgroung_picture-main/Kitchen cupboard.jpg" alt="Kitchen Cupboards">
+        <h3>Kitchen Cupboards</h3>
+        <div class="text-overlay">
+          <p>Beautiful, functional built-ins customized to your kitchen space.</p>
+        </div>
+      </div>
+
+      <div class="service" onclick="toggleImage(this)">
+        <img src="Images/backgroung_picture-main/Bedroom Cupboards.jpg" alt="Bedroom Cupboards">
+        <h3>Bedroom Cupboards</h3>
+        <div class="text-overlay">
+          <p>Space-saving, stylish bedroom storage solutions.</p>
+        </div>
+      </div>
+
+      <div class="service" onclick="toggleImage(this)">
+        <img src="Images/backgroung_picture-main/TV Stands.jpg" alt="TV Stands">
+        <h3>TV Stands</h3>
+        <div class="text-overlay">
+          <p>Modern and classic designs for your entertainment setup.</p>
+        </div>
+      </div>
+
+      <div class="service" onclick="toggleImage(this)">
+        <img src="Images/backgroung_picture-main/Office Furniture.jpg" alt="Office Furniture">
+        <h3>Office Furniture</h3>
+        <div class="text-overlay">
+          <p>Desks, cabinets and office solutions for your productivity.</p>
+        </div>
+      </div>
+
+      <div class="service" onclick="toggleImage(this)">
+        <img src="Images/backgroung_picture-main/Ceiling.jpg" alt="Ceilings">
+        <h3>Ceilings</h3>
+        <div class="text-overlay">
+          <p>Elegant and durable ceiling installations for any room.</p>
+        </div>
+      </div>
+
+      <div class="service" onclick="toggleImage(this)">
+        <img src="Images/backgroung_picture-main/Custom Furniture.jpg" alt="Custom Furniture">
+        <h3>Custom Furniture</h3>
+        <div class="text-overlay">
+          <p>We build any type of furniture tailored to your needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="thick-divider">
+
+  <section id="contact" class="contact-section">
+    <h2>📬 Get in Touch With Us</h2>
+    <p>We’d love to hear from you! Whether you’re looking for custom furniture or just have a question, reach out anytime.</p>
+    
+    <div class="contact-info">
+      <div class="contact-item">
+        <strong>📞 Phone:</strong> <a href="tel:0123456789">083 3585 581 /
+          076 0574 202 </a>
+      </div>
+      <div class="contact-item">
+        <strong>📧 Email:</strong> <a href="mailto:info@isinqobeleproject.co.za">mnqobiv2@gmail.com </a>
+      </div>
+      <div class="contact-item">
+        <strong>📍 Location:</strong> Kwazulu Natal
+      </div>
+    </div>
+  
+    <a href="mailto:mnqobiv2@gmail.com" class="cta-button">📨 Send Us a Message</a>
+  </section>
+  
+
+  <footer>
+    &copy; 2025 Isinqobele Project. All rights reserved.
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Swiper Init -->
+  <script>
+    new Swiper('.swiper', {
+      direction: 'horizontal',
+      loop: true,
+      autoplay: {
+        delay: 3000,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }
+    });
+  </script>
+
+  <!-- Image toggle zoom -->
+  <script>
+    function toggleImage(serviceElement) {
+      if (serviceElement.classList.contains('zoom')) {
+        serviceElement.classList.remove('zoom');
+      } else {
+        document.querySelectorAll('.service').forEach(service => {
+          service.classList.remove('zoom');
+        });
+        serviceElement.classList.add('zoom');
+      }
+    }
+  </script>
+
+</body>
+</html>

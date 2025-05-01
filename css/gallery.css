@@ -14,16 +14,44 @@ body {
 }
 
 /* Header */
+/* Header container */
 header {
-  background-color: #102E50;
-  color: #fff;
-  text-align: center;
-  padding: 40px 20px;
+  display: flex;
+  align-items: flex-start; /* Align items to top */
+  padding: 20px;
+  background-color: #10375C;
+  gap: 20px; /* Space between logo and text */
 }
 
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+/* Logo container */
+.logo-top-left img {
+  height: 140px;
+}
+
+/* Header text container */
+.header-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Title */
+.header-text h1 {
+  margin: 0;
+  font-size: 2em;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+/* Subtitle */
+.header-text p {
+  margin: 5px 0 0;
+  font-size: 1.2em;
+  color: #FFFFFF;
+  text-align: center;
 }
 
 /* Navigation */
@@ -36,13 +64,14 @@ nav {
 nav a {
   color: #fff;
   text-decoration: none;
+  font-weight: bold;
   margin: 0 20px;
   font-size: 1rem;
   transition: color 0.3s;
 }
 
 nav a:hover {
-  color: #ddd;
+  color: #f1c40f;
 }
 
 /* Section Headings */
